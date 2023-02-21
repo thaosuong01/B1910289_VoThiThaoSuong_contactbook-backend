@@ -49,7 +49,7 @@ exports.findOne = async (req, res, next) => {
     return res.send(document);
   } catch (error) {
     return next(
-      new ApiError(500, `Error retrieving contact with id=${rea.params.id}`)
+      new ApiError(500, `Error retrieving contact with id=${req.params.id}`)
     );
   }
 };
